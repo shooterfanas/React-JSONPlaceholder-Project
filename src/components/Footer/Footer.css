@@ -1,0 +1,14 @@
+.footer-social i{
+  transition: all ease-out 0.2s;
+}
+.footer-social i.github:hover{
+  color:gray;
+  transition: all ease-in 0.2s;
+}
+.footer-social i.linkedin:hover{
+  color:#0a66c2;
+  transition: all ease-in 0.2s;
+}
+.nav .active{
+  color: #007bff!important;
+}
