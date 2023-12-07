@@ -42,7 +42,7 @@ const Todos = ({index,todo,todos,setTodos,provided}) => {
             className={`rounded bg-warning p-3 mt-3 ${snapshot.isDragging ? "shadow-lg border border-success border-5" : ""}`}
           >
             <div className="row d-flex align-items-center">
-              <div className="col-9">
+              <div className="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-8">
                 {edit ? (
                 <input type="text"
                   ref={inputRef}
@@ -51,13 +51,13 @@ const Todos = ({index,todo,todos,setTodos,provided}) => {
                   className="p-1 fs-5 w-100"
                   />
                 ) : todo.isDone || droppableId ? (
-                  <s className="p-1 fs-5 text-break">{todo.title}</s>
+                  <s className="fs-5 text-break">{todo.title}</s>
                 ) : (
-                  <span className="p-1 fs-5 text-break">{todo.title}</span>
+                  <span className="fs-5 text-break">{todo.title}</span>
                 )}
               </div>
-              <div className="col-3 p-0">
-                <span className="fs-3 ms-2"
+              <div className="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-4 p-0 d-flex pt-sm-2 pt-md-0 justify-content-sm-center justify-content-end pe-3 pe-sm-0">
+                <span className="fs-3 ms-1"
                   onClick={
                     () => {if (!edit && !todo.isDone) {
                     setEdit(!edit);
@@ -65,10 +65,10 @@ const Todos = ({index,todo,todos,setTodos,provided}) => {
                   }>
                     <i className="bi bi-pencil-square"></i>
                   </span>
-                  <span className="fs-3 ms-2" onClick={() => handleDelete(todo.id)}>
+                  <span className="fs-3 ms-1" onClick={() => handleDelete(todo.id)}>
                     <i className="bi bi-trash"></i>
                   </span>
-                  <span className="fs-3 ms-2" onClick={() => handleDone(todo.id)}>
+                  <span className="fs-3 ms-1" onClick={() => handleDone(todo.id)}>
                     <i className="bi bi-check2-circle"></i>
                 </span>
               </div>

@@ -15,8 +15,8 @@ const Footer = () => {
               <NavLink to={"/about"} className="nav-link px-2 text-body-secondary fw-semibold">About</NavLink>
             </ul>
             <div className="row justify-content-between py-3">
-              <p className="col-md-4 d-flex align-items-center text-center text-body-secondary fw-semibold">© 2023 Coding By, Yusuf Genç </p>
-              <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <p className="col-md-6 col-12 col-sm-6 d-flex align-items-center justify-content-center justify-content-sm-start text-center text-body-secondary fw-semibold">© 2023 Coding By, Yusuf Genç </p>
+              <ul className="nav col-md-6 col-12 col-sm-6 justify-content-center justify-content-sm-end list-unstyled d-flex">
                 <li className="ms-3"><Link to={"https://www.linkedin.com/in/yusuf-genc28/"} target="_blank" className='text-body-secondary footer-social '><i className="bi bi-linkedin linkedin" style={{fontSize:"24px"}}></i></Link></li>
                 <li className="ms-3"><Link to={"https://github.com/shooterfanas"} target="_blank" className='text-body-secondary footer-social '><i className="bi bi-github github" style={{fontSize:"24px"}}></i></Link></li>
               </ul>

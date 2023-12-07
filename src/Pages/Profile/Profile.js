@@ -20,8 +20,8 @@ const Profile = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
           }}>
-          <div className="col-5 my-3 d-flex">
-            <div className="col-3">
+          <div className="col-12 col-md-9 col-lg-6 col-xl-5 my-3 d-flex">
+            <div className="col-3 ">
               <img src="/assets/img/avatar.png" className="img-thumbnail" alt="..."/>
             </div>
             <div className="col-9 ms-4 text-light">

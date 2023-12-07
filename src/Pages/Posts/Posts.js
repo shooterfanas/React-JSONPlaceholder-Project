@@ -7,7 +7,7 @@ const Posts = () => {
 
   return (
     <>
-    <div className="container">
+    <div className="container py-3">
       <div className="row d-flex justify-content-end">
         <div className="col-auto ">
           <div className="form-check form-switch pt-3">

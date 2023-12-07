@@ -7,7 +7,7 @@ const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}) => {
   return (
     <div className="container py-3">
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 pb-3 pb-sm-0 col-sm-6">
           <Droppable droppableId='TodosList'>
             {(provided,snapshot) => 
             (
@@ -34,7 +34,7 @@ const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}) => {
             )}
           </Droppable>
         </div>
-        <div className="col-6">
+        <div className="col-12 pt-3 pt-sm-0 col-sm-6">
           <Droppable droppableId='TodosRemove'>
           {(provided,snapshot) => 
           (

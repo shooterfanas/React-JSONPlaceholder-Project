@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext"
 import axios from "axios";
 import Pagination from "./paginates/Pagination";
 import { Link } from "react-router-dom";
-import Comments from "../Pages/Posts/Comments";
+import Comments from "./posts/Comments";
 import TodoList from "./todo/TodoList";
 import { DragDropContext } from "react-beautiful-dnd";
 import InputField from "./todo/InputField";
@@ -85,12 +85,12 @@ export const Posts = () => {
           posts.map((post) => (
               <div className="card w-75 my-3" key={post.id}>
                 <div className="card-body">
-                  <div className="row">
-                    <div className="col-1">
-                      <img src="/assets/img/avatar.png" style={{width: '34px', height:'34px'}} className="img-fluid rounded-circle shadow " alt=""/>
+                  <div className="row pt-4">
+                    <div className="col-12 pt-3 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
+                      <img src="/assets/img/avatar.png" style={{width: '68px', height:'68px'}} className="img-fluid rounded-circle shadow " alt=""/>
                     </div>
-                    <div className="col-8 fw-semibold ps-0 my-auto">{user[0].name}</div>
-                    <div className="col-3 fw-semibold text-end my-auto">{<Moment fromNow>{post.date}</Moment>}</div>
+                    <div className="col-12 col-sm-6 text-sm-start text-center pt-3 py-sm-2 fw-semibold">{user[0].name}</div>
+                    <div className="col-12 col-sm-6 text-sm-end text-center py-2 fw-semibold">{<Moment fromNow>{post.date}</Moment>}</div>
                     <hr className="my-3"/>
                   </div>
                   <h5 className="card-title">{post.title}</h5>
@@ -144,7 +144,7 @@ export const PostsNonPaginate = () => {
           :
           posts.map((post,index) => (
             <div className="row" key={post.id}>
-              <div className="col-2 text-center flex-column d-none d-sm-flex" >
+              <div className="col-md-3 col-lg-3 col-xl-2 text-center flex-column d-flex " >
                 <div className="row h-50">
                   <div className={`col ${index === 0 ? '' : ' border-end'}`}>&nbsp;</div>
                   <div className="col">&nbsp;</div>
@@ -157,15 +157,15 @@ export const PostsNonPaginate = () => {
                   <div className="col">&nbsp;</div>
                 </div>
               </div>
-              <div className="col-10 py-2" >
+              <div className="col-md-9 col-lg-9 col-xl-10 py-2" >
                 <div className="card my-3" >
                   <div className="card-body">
-                    <div className="row">
-                      <div className="col-1">
-                        <img src="/assets/img/avatar.png" style={{width: '34px', height:'34px'}} className="img-fluid rounded-circle shadow " alt=""/>
+                    <div className="row pt-4">
+                      <div className="col-12 pt-3 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
+                        <img src="/assets/img/avatar.png" style={{width: '68px', height:'68px'}} className="img-fluid rounded-circle shadow" alt=""/>
                       </div>
-                      <div className="col-8 fw-semibold ps-0 my-auto">{user[0].name}</div>
-                      <div className="col-3 fw-semibold text-end my-auto">{<Moment fromNow>{post.date}</Moment>}</div>
+                      <div className="col-12 col-sm-6 text-sm-start text-center pt-3 py-sm-2 fw-semibold">{user[0].name}</div>
+                      <div className="col-12 col-sm-6 text-sm-end text-center py-2 fw-semibold">{<Moment fromNow>{post.date}</Moment>}</div>
                       <hr className="my-3"/>
                     </div>
                     <h5 className="card-title">{post.title}</h5>
@@ -239,7 +239,7 @@ export const AllPostsData = () => {
 
   return (
     <>
-    <div className="container ">
+    <div className="container pt-1">
       <div className="row d-flex justify-content-center">
         {
           loading ?
@@ -247,7 +247,7 @@ export const AllPostsData = () => {
           :
           currentPosts.map((post,index) => (
             <div className="row" key={post.id}>
-            <div className="col-2 text-center flex-column d-none d-sm-flex" >
+            <div className="col-md-3 col-lg-3 col-xl-2 text-center flex-column d-flex" >
               <div className="row h-50">
                 <div className={`col ${index === 0 ? '' : ' border-end'}`}>&nbsp;</div>
                 <div className="col">&nbsp;</div>
@@ -260,15 +260,15 @@ export const AllPostsData = () => {
                 <div className="col">&nbsp;</div>
               </div>
             </div>
-            <div className="col-10 py-2" >
+            <div className="col-md-9 col-lg-9 col-xl-10 py-2" >
               <div className="card my-3" >
                 <div className="card-body">
-                  <div className="row">
-                    <div className="col-1">
-                      <img src="/assets/img/avatar.png" style={{width: '34px', height:'34px'}} className="img-fluid rounded-circle shadow " alt=""/>
+                  <div className="row pt-4">
+                    <div className="col-12 pt-3 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
+                      <img src="/assets/img/avatar.png" style={{width: '68px', height:'68px'}} className="img-fluid rounded-circle shadow " alt=""/>
                     </div>
-                    <div className="col-8 fw-semibold ps-0 my-auto">{post.username}</div>
-                    <div className="col-3 fw-semibold text-end my-auto">{<Moment fromNow>{post.date}</Moment>}</div>
+                    <div className="col-12 col-sm-6 text-sm-start text-center pt-3 py-sm-2 fw-semibold ">{post.username}</div>
+                    <div className="col-12 col-sm-6 text-sm-end text-center py-2 fw-semibold">{<Moment fromNow>{post.date}</Moment>}</div>
                     <hr className="my-3"/>
                   </div>
                   <h5 className="card-title">{post.title}</h5>
@@ -356,17 +356,21 @@ export const PostDetail = ({id}) => {
           <>
           <div className="card w-75 my-3 mt-5">
             <div className="card-body">
-              <div className="row">
-                <div className="col-1">
-                  <img src="/assets/img/avatar.png" style={{width: '34px', height:'34px'}} className="img-fluid rounded-circle shadow " alt=""/>
+              <div className="row pt-4">
+                <div className="col-12 pt-3 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
+                  <img src="/assets/img/avatar.png" style={{width: '68px', height:'68px'}} className="img-fluid rounded-circle shadow " alt=""/>
                 </div>
-                <div className="col-8 fw-semibold ps-0 my-auto">{lastData.username}</div>
-                <div className="col-3 fw-semibold text-end my-auto">{<Moment fromNow>{post.date}</Moment>}</div>
+                <div className="col-12 col-sm-6 text-sm-start text-center pt-3 py-sm-2 fw-semibold">{lastData.username}</div>
+                <div className="col-12 col-sm-6 text-sm-end text-center py-2 fw-semibold">{<Moment fromNow>{post.date}</Moment>}</div>
                 <hr className="my-3"/>
               </div>
               <h5 className="card-title">{post.title}</h5>
               <p className="card-text">{post.body}</p>
-              <button className="btn btn-success" onClick={() => setIsShowComments(!isShowComments)}>Show Comments</button>
+              <div className="row">
+                <div className="col-12 d-flex justify-content-center justify-content-sm-start">
+                  <button className="btn btn-success" onClick={() => setIsShowComments(!isShowComments)}>Show Comments</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -583,7 +587,7 @@ export const AlbumData = () => {
           (
             <>
             {album.slice(0,loadMore).map((album) => (
-              <div className="col-md-4" key={album.id}>
+              <div className="col-12 col-sm-6 col-md-4" key={album.id}>
                 <div className="card mb-4 shadow-sm">
                   <div className="row">
                     <div className="col-6 pe-0">
@@ -622,7 +626,7 @@ export const AlbumData = () => {
                 </div>
               </div>
             ))}
-            <div className="row d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <div className="col-auto">
                 <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? "It's Done" : 'Load More' }</button>
               </div>
@@ -738,7 +742,7 @@ export const AllAlbumData = () => {
           (
           <>
           {album.slice(0,loadMore).map((album) => (
-            <div className="col-md-4" key={album.id}>
+            <div className="col-12 col-sm-6 col-md-4" key={album.id}>
               <div className="card mb-4 shadow-sm">
                 <div className="row">
                   <div className="col-6 pe-0">
@@ -777,7 +781,7 @@ export const AllAlbumData = () => {
               </div>
             </div>
           ))}
-            <div className="row d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
                 <div className="col-auto">
                   <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? "It's Done" : 'Load More' }</button>
                 </div>
@@ -878,7 +882,7 @@ export const AlbumToPhotos = ({id}) => {
             <div className="row">
             {
               albumToPhotos.slice(3,photoLimit * (photoPage - 1)).map( (item,index) => (
-                  <div className="col-md-3 py-2 " key={item.id}>
+                  <div className="col-12 col-sm-6 col-md-3 py-2 " key={item.id}>
                     <Link>
                       <img src={item.url} alt="" className="img-fluid" onClick={() => handleOpenLightBox(index,"img")}/>
                     </Link>
