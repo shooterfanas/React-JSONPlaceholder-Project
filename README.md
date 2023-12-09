@@ -43,7 +43,11 @@ Project Details
         - Pagination is configured to be 2 posts per page, and a total of 10 posts are retrieved from the endpoint per user.
     - My Todos:
         - The components from the Todo page are also used here.
-    
+    - My Albums:
+        - The My Album component on the Album page is also utilized here.
+    - About Me:
+        - Information about the user logging in via the API is available.
+        - You can update your user information by clicking the Update button (Since it's a Fake API, a PUT request is sent, but the data is kept in the state as the page is refreshed on the actual API).
     - The endpoints provided by the API are separated into tables: Post, Album, Todo, and About.
 
     - All data in the tables comes from the "Datas.js" file in the "components" folder.

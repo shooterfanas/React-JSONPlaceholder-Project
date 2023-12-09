@@ -1,5 +1,6 @@
 import React from 'react'
 import { AlbumData, Posts, TodoData } from '../../components/Datas'
+import ProfileAbout from '../../components/Profile_About/ProfileAbout'
 
 const ProfileTabs = () => {
   return (
@@ -22,7 +23,7 @@ const ProfileTabs = () => {
       <div className="tab-pane fade show active py-3" id="posts-tab-pane" role="tabpanel" aria-labelledby="posts-tab" tabIndex="0"><Posts/></div>
       <div className="tab-pane fade py-3" id="albums-tab-pane" role="tabpanel" aria-labelledby="albums-tab" tabIndex="0"><AlbumData/></div>
       <div className="tab-pane fade py-3" id="todos-tab-pane" role="tabpanel" aria-labelledby="todos-tab" tabIndex="0"><TodoData/></div>
-      <div className="tab-pane fade py-3" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab" tabIndex="0">Coming Soon...</div>
+      <div className="tab-pane fade py-3" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab" tabIndex="0"><ProfileAbout/></div>
     </div>
     </>
   )

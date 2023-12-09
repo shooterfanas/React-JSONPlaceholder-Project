@@ -38,6 +38,11 @@ Proje Detayları
         - pagination için sayfa başına 2 adet olacak şekilde ayarlanmıştır toplamda endpoint üzerinden 10 adet post gelmektedir kullanıcı başına.
     - My Todos:
         - Todo sayfasındaki componentler burada da kullanılmaktadır.
+    - My Albums:
+        - Album sayfasındaki My Album componenti burada da kullanılmaktadır.
+    - About Me:
+        - API üzerinden giriş yapan kullanıcının bilgileri yer almaktadır.
+        - Update butonuna tıklayarak kullanıcı bilgilerinizi güncelleyebilirsiniz (Fake API olduğu için put isteği gönderilir ama veri API de sayfa yenilendiğinde gideceği için state olarak tutulur.)
 
     - API'nin sunduğu endpointleri tabler halinde Post, Album, Todo ve About olarak ayrılmıştır.
     - Tüm tablerdeki veriler "components" klasörü içindeki "Datas.js" dosyasından gelmektedir.
