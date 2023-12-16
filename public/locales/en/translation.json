@@ -1,0 +1,88 @@
+{
+    "comingsoon":"Coming Soon...",
+    "404":"404 - Not Found",
+    "gohome": "Go Home Page",
+    "switchallposts": "All Posts",
+    "switchmyposts": "My Posts",
+    "switchallalbum": "All Album",
+    "switchmyalbum": "My Album",
+
+
+    "_commentHeader": "Header & Footer",
+
+    "home": "Home",
+    "posts": "Posts",
+    "album": "Album",
+    "todo": "Todo",
+    "about": "About",
+    "profile": "Profile",
+    "login": "Login",
+    "logout": "Logout",
+    "countdown": "Your session has expired. It will be terminated in {{countdown}} seconds.",
+  
+
+    "_commentProfileTabs": "Profile Tabs",
+  
+    "myposts": "My Posts",
+    "myalbums": "My Albums",
+    "mytodos": "My Todos",
+    "aboutme": "About Me",
+
+  
+    "_commentHome": "Home",
+  
+    "homeslogan" : "Welcome JSON Placeholder Fake API Project",
+    "homecardpost" : "Posts",
+    "homecardalbum" : "Album",
+    "homecardtodo" : "Todo",
+    "homecardaboutdev" : "About Developer",
+    "homecardredirectbtn" : "Redirect Me!",
+
+
+    "_commentLogin": "Login Form",
+  
+    "loginTitle" : "Login",
+    "emailLabel" : "E-mail",
+    "emailValid" : "Please Enter E-Mail format",
+    "passLabel" : "Password",
+    "passValid" : "Please Enter your Password",
+    "rememberCheck" : "Remember Me",
+    "signinBtn" : "Sign In",
+    "loginInfo" : "E-Mail: Sincere@april.biz  Pass: Bret",
+    "loginError": "Email or password is incorrect",
+
+
+    "_commentTodo": "Todo",
+
+    "activeTasks" : "Active Tasks",
+    "completedTasks" : "Completed Tasks",
+    "addTask" : "Add Task",
+    "enterTask" : "Enter a Task",
+
+
+    "_commentProfileAboutMe": "About Me Tab (Profile Page)",
+  
+    "socialWebsite" : "Website",
+    "socialLinkedin" : "Linkedin",
+    "socialGithub" : "Github",
+    "socialTwitter" : "Twitter",
+    "socialInstagram" : "Instagram",
+    "updateFormNameTitle" : "Full Name",
+    "updateFormNamePlace" : "Enter Full Name",
+    "updateFormEmailTitle" : "Email",
+    "updateFormEmailPlace" : "Enter email",
+    "updateFormPhoneTitle" : "Phone",
+    "updateFormPhonePlace" : "Phone Number",
+    "updateFormAddressTitle" : "Address",
+    "updateFormAddressPlace" : "abc apt, abc st , LA",
+    "updateFormBtn" : "Update",
+
+
+    "_commentDatasjs": "Datas.js",
+  
+    "loading" : "Loading...",
+    "readMore" : "Read More",
+    "showComments" : "Show Comments",
+    "loadMoreText" : "Load More",
+    "loadMoreDoneText" : "It's Done"
+}

@@ -1,44 +1,46 @@
 import React from 'react'
 import './home.css'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Home = () => {
+  const {t} = useTranslation();
 
   const homeCardData= [
     {
       bg: "l-bg-cherry",
-      title:"Posts",
+      title: t("homecardpost"),
       icon:"bi bi-postcard",
       link:"/posts",
-      linkTitle:"Redirect Me!"
+      linkTitle: t("homecardredirectbtn")
     },
     {
       bg: "l-bg-blue-dark",
-      title:"Album",
+      title: t("homecardalbum"),
       icon:"bi bi-file-image",
       link:"/albums",
-      linkTitle:"Redirect Me!"
+      linkTitle: t("homecardredirectbtn")
     },
     {
       bg: "l-bg-green-dark",
-      title:"Todo",
+      title: t("homecardtodo"),
       icon:"bi bi-check2-circle",
       link:"/todo",
-      linkTitle:"Redirect Me!"
+      linkTitle: t("homecardredirectbtn")
     },
     {
       bg: "l-bg-orange-dark",
-      title:"About Developer",
+      title: t("homecardaboutdev"),
       icon:"bi bi-code-slash",
       link:"/about",
-      linkTitle:"Redirect Me!"
+      linkTitle: t("homecardredirectbtn")
     },
   ]
   return (
     <div className="container py-5">
       <div className="row">
         <div className="col-12 text-center">
-          <p className='fs-3 fw-semibold py-5'>Welcome JSON Placeholder Fake API Project</p>
+          <p className='fs-3 fw-semibold py-5'>{t("homeslogan")}</p>
         </div>
       </div>
     <div className="row ">

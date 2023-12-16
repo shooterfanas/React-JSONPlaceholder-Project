@@ -1,11 +1,14 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 
 const Page404 = () => {
+  const {t} = useTranslation();
+
   return (
     <>
-      <div>404 - Not Found</div>
-      <Link to='/'>Go Home Page</Link>
+      <div>{t("404")}</div>
+      <Link to='/'>{t("gohome")}</Link>
     </>
   )
 }

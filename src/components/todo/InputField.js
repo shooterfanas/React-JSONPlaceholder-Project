@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const InputField = ({ todo, setTodo, handleAdd }) => {
 
   const inputRef = useRef(null);
+  const {t}= useTranslation()
   return (
     <div className="container">
       <div className="row d-flex justify-content-center">
@@ -16,7 +18,7 @@ const InputField = ({ todo, setTodo, handleAdd }) => {
           >
             <input
               type="text"
-              placeholder="Enter a Task"
+              placeholder={t("enterTask")}
               value={todo}
               ref={inputRef}
               onChange={(e) => setTodo(e.target.value)}
@@ -24,7 +26,7 @@ const InputField = ({ todo, setTodo, handleAdd }) => {
             />
             <button type="submit" 
             className="btn btn-primary position-absolute fs-5 border border-0 end-0 h-100">
-              Add Task
+              {t("addTask")}
             </button>
           </form>
         </div>

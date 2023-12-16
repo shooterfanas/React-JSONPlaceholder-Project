@@ -15,9 +15,9 @@ Project Overview
 - ✅ Photos (Album Detail Page) (React Infinite Scroll Component)
 - ✅ Posts page (Pagination)
 - About Me page (Information about the project owner and preview of a PDF using react-pdf)
-- i18n multilanguage support
+- ✅i18n multilanguage support
 - Theme settings
-- Responsive design
+- ✅Responsive design
 - ✅ React Moment
 - ✅ React - Embla Carousel
 - ✅ yet-another-react-lightbox

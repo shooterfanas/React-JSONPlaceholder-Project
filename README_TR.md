@@ -15,9 +15,9 @@ Projeye Ön Bakış
 - ✅Fotoğraflar (Album Detay Sayfası) (React Infinite Scroll Component)
 - ✅Postlar sayfası (Pagination)
 - Hakkımda sayfası (Proje sahibi hakkında bilgiler ve react-pdf ile pdf ön izleme)
-- i18 multilanguage
+- ✅i18 multilanguage
 - Tema ayarları
-- Responsive
+- ✅Responsive
 - ✅React Moment
 - ✅React - Embla Carousel
 - ✅yet-another-react-lightbox

@@ -3,9 +3,11 @@ import { useAuth } from '../../context/AuthContext'
 import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 
 
 const Login = () => {
+  const {t} = useTranslation();
 
   const [email,setEmail] = useState('');
   const [pass,setPass] = useState('');
@@ -42,7 +44,7 @@ const Login = () => {
       }
       setEmail('');
       setPass('');
-      setError('Email or password is incorrect');
+      setError(t("loginError"));
     } catch (error) {
       return error
     }
@@ -50,37 +52,37 @@ const Login = () => {
   
   return (
     <>
-    <div className="container">
+    <div className="container h-100 d-grid align-items-center">
       <div className="row">
-        <div className="col-4 mx-auto">
-          <h2 className='mb-3'>Login Form</h2>
+        <div className="col-9 col-sm-4 mx-auto">
+          <h2 className='mb-3 text-center '>{t("loginTitle")}</h2>
           {error &&
             <div className="alert alert-danger" role="alert">
             {error}
           </div>
           }
-          <form className='needs-validation' onSubmit={handleSubmit} >
+          <form className='needs-validation mb-2' onSubmit={handleSubmit} >
             <div className="form-group mb-2 was-validated">
-              <label htmlFor="email" className='form-label'>Email Address</label>
+              <label htmlFor="email" className='form-label'>{t("emailLabel")}</label>
               <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} required/>
               <div className="invalid-feedback">
-                 Please Enter E-Mail format
+                {t("emailValid")}
               </div>
             </div>
             <div className="form-group mb-2 was-validated">
-              <label htmlFor="password" className='form-label'>Password Address</label>
+              <label htmlFor="password" className='form-label'>{t("passLabel")}</label>
               <input type="password" className='form-control' value={pass} onChange={(e) => setPass(e.target.value)} required/>
               <div className="invalid-feedback">
-                 Please Enter your Password
+                {t("passValid")}
               </div>
             </div>
             <div className="mb-3 form-check">
               <input type="checkbox" className="form-check-input" id="exampleCheck1" checked={remember} onChange={(e) => setRemember(e.target.checked)}/>
-              <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
+              <label className="form-check-label" htmlFor="exampleCheck1">{t("rememberCheck")}</label>
             </div>
-            <button type='submit' className='btn btn-success w-100'>Sign In</button>
+            <button type='submit' className='btn btn-success w-100'>{t("signinBtn")}</button>
           </form>
-          <small>E-Mail: Sincere@april.biz  Pass:Bret</small>
+          <small>{t("loginInfo")}</small>
         </div>
         
       </div>

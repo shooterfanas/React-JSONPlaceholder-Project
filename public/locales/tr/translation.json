@@ -1,0 +1,88 @@
+{
+  "comingsoon":"Çok Yakında...",
+  "404":"404 - Bulunamadı",
+  "gohome": "Anasayfaya Git",
+  "switchallposts": "Tüm Postlar",
+  "switchmyposts": "Postlarım",
+  "switchallalbum": "Tüm Albümler",
+  "switchmyalbum": "Albümüm",
+
+
+  "_commentHeader": "Header",
+
+  "home": "Anasayfa",
+  "posts": "Postlar",
+  "album": "Albüm",
+  "todo": "Yapılacaklar",
+  "about": "Hakkında",
+  "profile": "Profil",
+  "login": "Giriş Yap",
+  "logout": "Çıkış Yap",
+  "countdown": "Oturum süreniz doldu {{countdown}} saniye sonra oturumunuz sonlandırılacaktır.",
+
+
+  "_commentProfileTabs": "Profile Tabs",
+
+  "myposts": "Postlarım",
+  "myalbums": "Albümlerim",
+  "mytodos": "Yapılacaklarım",
+  "aboutme": "Hakkımda",
+
+
+  "_commentHome": "Home",
+
+  "homeslogan" : "JSON Placeholder Sahte API Projesine Hoş Geldiniz",
+  "homecardpost" : "Postlar",
+  "homecardalbum" : "Albüm",
+  "homecardtodo" : "Yapılacaklar",
+  "homecardaboutdev" : "Developer Hakkında",
+  "homecardredirectbtn" : "Beni Yönlendir!",
+
+
+  "_commentLogin": "Login Form",
+
+  "loginTitle" : "Giriş",
+  "emailLabel" : "E-mail",
+  "emailValid" : "Lütfen E-Mail formatında giriniz.",
+  "passLabel" : "Şifre",
+  "passValid" : "Şifre giriniz",
+  "rememberCheck" : "Beni Hatırla",
+  "signinBtn" : "Giriş Yap",
+  "loginInfo" : "E-Mail: Sincere@april.biz  Pass: Bret",
+  "loginError": "E-Mail veya şifre hatalı",
+
+
+  "_commentTodo": "Todo",
+
+  "activeTasks" : "Aktif Görevler",
+  "completedTasks" : "Bitmiş Görevler",
+  "addTask" : "Görev Ekle",
+  "enterTask" : "Görev Girin",
+
+
+  "_commentProfileAboutMe": "About Me Tab (Profile Page)",
+
+  "socialWebsite" : "Website",
+    "socialLinkedin" : "Linkedin",
+    "socialGithub" : "Github",
+    "socialTwitter" : "Twitter",
+    "socialInstagram" : "Instagram",
+    "updateFormNameTitle" : "Ad Soyad",
+    "updateFormNamePlace" : "Ad Soyad Girin",
+    "updateFormEmailTitle" : "E-Mail",
+    "updateFormEmailPlace" : "E-Mail Girin",
+    "updateFormPhoneTitle" : "Telefon",
+    "updateFormPhonePlace" : "5xx xxx xx xx",
+    "updateFormAddressTitle" : "Adres",
+    "updateFormAddressPlace" : "abc apt., abc sok. , İstanbul",
+    "updateFormBtn" : "Güncelle",
+
+
+    "_commentDatasjs": "Datas.js",
+  
+    "loading" : "Yükleniyor...",
+    "readMore" : "Devamını oku",
+    "showComments" : "Yorumları Göster",
+    "loadMoreText" : "Daha fazla yükle",
+    "loadMoreDoneText" : "Bitti"
+}

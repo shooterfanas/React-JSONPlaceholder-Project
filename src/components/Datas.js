@@ -13,6 +13,7 @@ import './Photos/base.css'
 import './Photos/embla.css'
 import InfiniteScroll from "react-infinite-scroll-component";
 import YetLightbox from "./Photos/YetLightbox";
+import { useTranslation } from "react-i18next";
 
 
 // Functions
@@ -21,16 +22,19 @@ const randomDate = (start, end) => {
 };
 // Functions End
 
+
+
 // Profile Page - My Posts Tab
 export const Posts = () => {
   const {user} = useAuth();
+  const {t} = useTranslation();
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(2);
   const [totalCount, setTotalCount] = useState(0)
-  const [randomMomentDate, setRandomMomentDate] = useState(Array.from({ length: 10 }, () => randomDate(new Date(2022, 0, 1), new Date())));
+  const [randomMomentDate] = useState(Array.from({ length: 10 }, () => randomDate(new Date(2022, 0, 1), new Date())));
 
 
   const postData = async (page, limit) => {
@@ -80,7 +84,7 @@ export const Posts = () => {
       <div className="row d-flex justify-content-center">
         {
           loading ?
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           :
           posts.map((post) => (
               <div className="card w-75 my-3" key={post.id}>
@@ -110,6 +114,7 @@ export const Posts = () => {
 // Posts Page
 export const PostsNonPaginate = () => {
   const {user} = useAuth();
+  const {t} = useTranslation();
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -140,7 +145,7 @@ export const PostsNonPaginate = () => {
       <div className="row d-flex justify-content-center">
         {
           loading ?
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           :
           posts.map((post,index) => (
             <div className="row" key={post.id}>
@@ -170,7 +175,7 @@ export const PostsNonPaginate = () => {
                     </div>
                     <h5 className="card-title">{post.title}</h5>
                     <p className="card-text">{post.body}</p>
-                    <Link to={`/posts/${post.id}`}>Read More</Link>
+                    <Link to={`/posts/${post.id}`}>{t("readMore")}</Link>
                   </div>
                 </div>
               </div>
@@ -184,6 +189,7 @@ export const PostsNonPaginate = () => {
 }
 
 export const AllPostsData = () => {
+  const {t} = useTranslation();
 
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
@@ -243,7 +249,7 @@ export const AllPostsData = () => {
       <div className="row d-flex justify-content-center">
         {
           loading ?
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           :
           currentPosts.map((post,index) => (
             <div className="row" key={post.id}>
@@ -273,7 +279,7 @@ export const AllPostsData = () => {
                   </div>
                   <h5 className="card-title">{post.title}</h5>
                   <p className="card-text">{post.body}</p>
-                  <Link to={`/posts/${post.id}`}>Read More</Link>
+                  <Link to={`/posts/${post.id}`}>{t("readMore")}</Link>
                 </div>
               </div>
             </div>
@@ -295,6 +301,7 @@ export const PostDetail = ({id}) => {
   const [comments,setComments] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isShowComments, setIsShowComments] = useState(false);
+  const {t} = useTranslation();
 
   
 
@@ -351,7 +358,7 @@ export const PostDetail = ({id}) => {
       
         {
           loading ?
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           :
           <>
           <div className="card w-75 my-3 mt-5">
@@ -368,7 +375,7 @@ export const PostDetail = ({id}) => {
               <p className="card-text">{post.body}</p>
               <div className="row">
                 <div className="col-12 d-flex justify-content-center justify-content-sm-start">
-                  <button className="btn btn-success" onClick={() => setIsShowComments(!isShowComments)}>Show Comments</button>
+                  <button className="btn btn-success" onClick={() => setIsShowComments(!isShowComments)}>{t("showComments")}</button>
                 </div>
               </div>
             </div>
@@ -483,6 +490,7 @@ export const TodoData = ()=> {
 
 // Album Page
 export const AlbumData = () => {
+  const {t} = useTranslation();
 
   const [album, setAlbum] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -581,7 +589,7 @@ export const AlbumData = () => {
         {
           loading ? (
 
-            <h2 className="text-center mt-4">Loading...</h2>
+            <h2 className="text-center mt-4">{t("loading")}</h2>
           )
           :
           (
@@ -628,7 +636,7 @@ export const AlbumData = () => {
             ))}
             <div className="d-flex justify-content-center">
               <div className="col-auto">
-                <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? "It's Done" : 'Load More' }</button>
+                <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? t("loadMoreDoneText") : t("loadMoreText") }</button>
               </div>
             </div>
             
@@ -643,6 +651,7 @@ export const AlbumData = () => {
 }
 
 export const AllAlbumData = () => {
+  const {t} = useTranslation();
 
   const [album, setAlbum] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -736,7 +745,7 @@ export const AllAlbumData = () => {
       <div className="row">
         {
           loading ? (
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           )
           :
           (
@@ -783,7 +792,7 @@ export const AllAlbumData = () => {
           ))}
             <div className="d-flex justify-content-center">
                 <div className="col-auto">
-                  <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? "It's Done" : 'Load More' }</button>
+                  <button className="btn btn-primary" onClick={loadMorePaginate} disabled={loadMore >= album.length ? true : false}>{loadMore >= album.length ? t("loadMoreDoneText") : t("loadMoreText") }</button>
                 </div>
             </div>
           </>
@@ -801,10 +810,11 @@ export const AlbumToPhotos = ({id}) => {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [photoPage, setPhotoPage] = useState(2);
-  const [photoLimit, setPhotoLimit] = useState(10);
+  const [photoLimit] = useState(10);
   const [dataLength, setDataLength] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const {t} = useTranslation();
 
 
   useEffect(() => {
@@ -863,7 +873,7 @@ export const AlbumToPhotos = ({id}) => {
       
         {
           loading ?
-          <h2 className="text-center mt-4">Loading...</h2>
+          <h2 className="text-center mt-4">{t("loading")}</h2>
           :
           <>
           {
@@ -874,8 +884,8 @@ export const AlbumToPhotos = ({id}) => {
             dataLength={albumToPhotos.length}
             next={moreData} 
             hasMore={hasMore}
-            loader={<p>Loading...</p>}
-            endMessage={<p className="text-warning fw-semibold pt-2">It's Done!</p>}
+            loader={<p>{t("loading")}</p>}
+            endMessage={<p className="text-warning fw-semibold pt-2">{t("loadMoreDoneText")}</p>}
             style={{overflow: "hidden", textAlign: "center"}}
             >
                 

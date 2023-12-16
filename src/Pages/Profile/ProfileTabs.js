@@ -1,22 +1,24 @@
 import React from 'react'
 import { AlbumData, Posts, TodoData } from '../../components/Datas'
 import ProfileAbout from '../../components/Profile_About/ProfileAbout'
+import { useTranslation } from 'react-i18next'
 
 const ProfileTabs = () => {
+  const {t} = useTranslation();
   return (
     <>
     <ul className="nav nav-tabs" id="myTab" role="tablist">
       <li className="nav-item" role="presentation">
-        <button className="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-tab-pane" type="button" role="tab" aria-controls="posts-tab-pane" aria-selected="true">My Posts</button>
+        <button className="nav-link active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-tab-pane" type="button" role="tab" aria-controls="posts-tab-pane" aria-selected="true">{t("myposts")}</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link" id="albums-tab" data-bs-toggle="tab" data-bs-target="#albums-tab-pane" type="button" role="tab" aria-controls="albums-tab-pane" aria-selected="false">My Albums</button>
+        <button className="nav-link" id="albums-tab" data-bs-toggle="tab" data-bs-target="#albums-tab-pane" type="button" role="tab" aria-controls="albums-tab-pane" aria-selected="false">{t("myalbums")}</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link" id="todos-tab" data-bs-toggle="tab" data-bs-target="#todos-tab-pane" type="button" role="tab" aria-controls="todos-tab-pane" aria-selected="false">My Todos</button>
+        <button className="nav-link" id="todos-tab" data-bs-toggle="tab" data-bs-target="#todos-tab-pane" type="button" role="tab" aria-controls="todos-tab-pane" aria-selected="false">{t("mytodos")}</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="false">About Me</button>
+        <button className="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="false">{t("aboutme")}</button>
       </li>
     </ul>
     <div className="tab-content" id="myTabContent">

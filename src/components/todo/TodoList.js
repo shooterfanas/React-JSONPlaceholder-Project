@@ -1,9 +1,10 @@
 import React from 'react'
 import Todos from './Todos'
 import { Droppable } from 'react-beautiful-dnd'
+import { useTranslation } from 'react-i18next'
 
 const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}) => {
-  
+  const {t} = useTranslation();
   return (
     <div className="container py-3">
       <div className="row">
@@ -18,7 +19,7 @@ const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}) => {
                 {...provided.droppableProps}
               >
                 <h2 className="text-white text-center">
-                  Active Tasks
+                  {t("activeTasks")}
                 </h2>
                 {todos?.map((todo,index) => (
                   <Todos
@@ -46,7 +47,7 @@ const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}) => {
                 {...provided.droppableProps}
               >
               <h2 className="text-white text-center">
-                  Completed Tasks
+                  {t("completedTasks")}
                 </h2>
               {completedTodos.map((todo,index) => (
                   <Todos 
